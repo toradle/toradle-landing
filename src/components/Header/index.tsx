@@ -66,19 +66,7 @@ const Header: React.FC<HeaderProps> = ({ home }) => {
                 <div className="flex gap-5 justify-between w-full text-base font-bold text-center text-amber-300">
                     <Link href="/" className="uppercase text-toradleyellow font-inter text-3xl">Toradle</Link>
                     {NavLinks()}
-                    <Popover>
-                        <PopoverTrigger>
-                            <Button className="bg-toradlegolden px-10 hover:bg-toradlegolden hover:scale-110">Login</Button>
-                        </PopoverTrigger>
-                        <PopoverContent>
-                            <div className="flex flex-col gap-4">
-                                <p className="font-bold">Login</p>
-                                <Input placeholder="Email" />
-                                <Input placeholder="password" />
-                                <Button className="bg-toradlegolden px-10">Login</Button>
-                            </div>
-                        </PopoverContent>
-                    </Popover>
+
                 </div>
             </header>
         );
@@ -88,20 +76,7 @@ const Header: React.FC<HeaderProps> = ({ home }) => {
                 <div className="flex gap-5 justify-between w-full text-base font-bold text-center text-white">
                     <Link href="/" className="uppercase text-white font-inter text-3xl">Toradle</Link>
                     {NavLinks()}
-                    <Popover>
-                        <PopoverTrigger>
-                            <Avatar>
-                                <AvatarImage src="https://github.com/shadcn.png" />
-                                <AvatarFallback>CN</AvatarFallback>
-                            </Avatar>
-                        </PopoverTrigger>
-                        <PopoverContent>
-                            <div className="flex flex-col gap-4">
-                                <p className="font-bold">{profileName}</p>
-                                <Button onClick={onLogout} className="bg-toradlegolden px-10">Logout</Button>
-                            </div>
-                        </PopoverContent>
-                    </Popover>
+
                 </div>
             </header>
         );
