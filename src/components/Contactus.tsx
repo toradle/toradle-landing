@@ -2,10 +2,10 @@ import React from "react";
 import Link from "next/link";
 import Signup from "./signup";
 
-const Beta: React.FC = () => {
+const ContactUs: React.FC = () => {
     return (
         <>
-            <section className="w-full py-12 md:py-24 lg:py-32 text-white" id="beta">
+            <section className="w-full py-12 md:py-24 lg:py-32 text-white" id="contactus">
                 <div className="container space-y-12 px-4 md:px-6">
                     <div className="flex flex-col items-center justify-center space-y-4 text-center">
                         <div className="space-y-2">
@@ -43,4 +43,4 @@ const Beta: React.FC = () => {
     );
 };
 
-export default Beta;
+export default ContactUs;

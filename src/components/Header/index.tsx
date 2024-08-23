@@ -1,104 +1,34 @@
-"use client"
-import Link from "next/link";
 import * as React from "react";
+import Image from "next/image";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { usePathname } from 'next/navigation';
 
-import {
-    NavigationMenu,
-    NavigationMenuContent,
-    NavigationMenuIndicator,
-    NavigationMenuItem,
-    NavigationMenuLink,
-    NavigationMenuList,
-    NavigationMenuTrigger,
-    NavigationMenuViewport,
-    navigationMenuTriggerStyle
-} from "@/components/ui/navigation-menu";
-
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-
-import {
-    Popover,
-    PopoverContent,
-    PopoverTrigger,
-} from "@/components/ui/popover";
-import { Input } from "@/components/ui/input";
-import { HeaderProps, LinkItem } from "@/types/header";
-import { NAV_LINKS } from "@/constants";
-import { Menu } from "lucide-react";
-
-const NavLinks = () => {
-    const currentRoute = usePathname();
-
+const HeaderComp: React.FC = () => {
     return (
-        <>
-            <div className="block sm:hidden">
-                <Popover>
-                    <PopoverTrigger asChild className="p-2 !bg-transparent hover:bg-transparent">
-                        <Button variant="ghost" className="p-2 focus:bg-transparent">
-                            <Menu className="bg-transparent text-toradleyellow" />
+        <header className="flex justify-center items-center p-5 text-white">
+            <div className="flex flex-col sm:flex-row-reverse items-center sm:justify-between justify-center gap-5 my-24 px-4 sm:px-40 py-12">
+                <Image src={"/toradle_icon.svg"} alt="toradle logo" width={150} height={150} className="sm:w-[400px]" />
+                <div className="flex flex-col gap-4 items-center sm:items-start">
+                    <div className="text-center sm:text-left text-7xl text-white">
+                        Toradle.
+                        <br />
+                        Investing made simple.
+                    </div>
+                    <div className="text-center sm:text-left text-white text-xl">
+                        Precision-Driven Market Trade Advisory for Stocks and Crypto
+                    </div>
+                    <Link
+                        href="#beta"
+                    >
+                        <Button className="bg-toradleyellow text-black focus:bg-toradleyellow focus:text-black active:scale-105">
+                            Get an Invite
                         </Button>
-                    </PopoverTrigger>
-                    <PopoverContent className="w-48 p-2 mx-6 bg-transparent border-none">
-                        <NavigationMenu className="">
-                            <NavigationMenuList className="flex flex-col gap-4">
-                                {NAV_LINKS.map((item: LinkItem) => {
-                                    const isActive = currentRoute === item.link;
-                                    return (
-                                        <NavigationMenuItem key={item.id}>
-                                            <Link href={item.link} legacyBehavior passHref>
-                                                <NavigationMenuLink className="text-toradleyellow font-bold">
-                                                    {item.title}
-                                                </NavigationMenuLink>
-                                            </Link>
-                                        </NavigationMenuItem>
-                                    );
-                                })}
-                            </NavigationMenuList>
-                        </NavigationMenu>
-                    </PopoverContent>
-                </Popover>
-            </div>
-            <NavigationMenu className="hidden sm:block">
-                <NavigationMenuList className="flex flex-row gap-10">
-                    {NAV_LINKS.map((item: LinkItem) => {
-                        const isActive = currentRoute === item.link;
-                        return (<NavigationMenuItem key={item.id}>
-                            <Link href={item.link} legacyBehavior passHref>
-                                <NavigationMenuLink className="text-toradleyellow bg-transparent">
-                                    {item.title}
-                                </NavigationMenuLink>
-                            </Link>
-                        </NavigationMenuItem>
-                        );
-                    })}
-                </NavigationMenuList>
-            </NavigationMenu>
-        </>
-    );
-};
-
-const Header = () => {
-    const profileName = "TEST ACCOUNT";
-
-    const onLogin = () => {
-
-    };
-
-    const onLogout = () => {
-
-    };
-
-    return (
-        <header className="flex flex-col grow p-5 sm:px-40 w-full">
-            <div className="flex flex-row gap-5 justify-between items-center text-base font-bold text-center text-amber-300">
-                <Link href="/" className="uppercase text-toradleyellow font-inter text-3xl text-center">Toradle</Link>
-                {NavLinks()}
+                    </Link>
+                </div>
             </div>
         </header>
     );
-
 };
 
-export default Header;
+export default HeaderComp;
+

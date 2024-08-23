@@ -2,9 +2,9 @@ import HomeComponent from "@/components/Home";
 
 export default function Home() {
   return (
-    <main>
+    <section>
       <HomeComponent />
-    </main>
+    </section>
   );
 }
 

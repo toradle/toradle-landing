@@ -1,51 +1,36 @@
+import { ABOUT_US } from "@/constants";
 import React from "react";
+
+const TITLE = "About Us";
+const DESC = `
+  Welcome to Toradle, the future of market trade advisory.
+  Our mission is to democratize financial success by providing accurate,
+  data-driven trading recommendations for both stocks and cryptocurrencies.
+`;
 
 const AboutUs: React.FC = () => {
   return (
-    <section className="py-12 bg-gray-100" id="aboutus">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-8">About Us</h2>
-        <p className="text-lg text-center mb-6">
-          Welcome to Toradle, the future of market trade advisory.
-          Our mission is to democratize financial success by providing accurate,
-          data-driven trading recommendations for both stocks and cryptocurrencies.
+    <section className="flex flex-col sm:gap-20 px-8 sm:my-20 sm:py-12 sm:px-40 text-white text-center sm:text-left" id="aboutus">
+      <div className="my-16">
+        <h2 className="text-5xl font-bold mb-8">{TITLE}</h2>
+        <p className="text-lg mb-6 w-full md:w-1/2">
+          {DESC}
         </p>
-        <div className="flex flex-wrap justify-center">
-          <div className="w-full md:w-1/3 p-4">
-            <div className="text-center bg-white p-6 rounded-lg shadow-lg">
-              <h3 className="text-center text-xl font-semibold mb-4">Our Unique Approach</h3>
-              <p>
-                Toradle stands apart from other trading platforms with our proprietary machine learning algorithm.
-                Unlike traditional methods that rely on news reports, gossip, or graphical analysis,
-                Toradle uses precision mathematics to calculate the statistical probability of price events.
-                This ensures a high likelihood of success, focusing purely on quantitative data from open-source and third-party APIs.
-              </p>
-            </div>
-          </div>
-          <div className="w-full md:w-1/3 p-4">
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h3 className="text-center text-xl font-semibold mb-4">How It Works</h3>
-              <p className="text-center">
-                Our algorithm continuously processes market data to identify potential buy or sell opportunities in real time.
-                By avoiding the biases inherent in graphical and technical analysis, we offer our users a clear advantage.
-                We also provide a unique Tranche size analysis, helping you determine the optimal budget for each trade and
-                enabling cost averaging for more successful outcomes.
-              </p>
-            </div>
-          </div>
-          <div className="w-full md:w-1/3 p-4">
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h3 className="text-center text-xl font-semibold mb-4">Our Commitment</h3>
-              <p className="text-center">
-                At Toradle, we believe in leveraging our expertise so you don't have to worry about creating complex trading algorithms.
-                Our goal is to provide you with high-probability trade recommendations, backed by rigorous mathematical analysis and
-                a commitment to accuracy. We want to give everyone a high chance of making money from the market. 
-                Our mission is to demoratize financial success.
-              </p>
-            </div>
-          </div>
-        </div>
       </div>
+
+      <div className="flex flex-col gap-20 text-white">
+        {ABOUT_US.map((section, index) => (
+          <div key={index} className="text-center sm:text-left w-full border sm:border-none sm:p-0 rounded-xl p-5">
+            <div className="rounded-lg shadow-lg">
+              <h3 className="text-4xl uppercase font-semibold mb-4">{section.title}</h3>
+              <p className="sm:w-1/2">
+                {section.content}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+
     </section>
   );
 };
