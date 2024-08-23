@@ -30,7 +30,7 @@ const Footer: React.FC<FooterProps> = ({ className }) => {
         <p className="my-7 font-light tracking-tight text-center md:text-left">
           {DISCLAIMER}
         </p>
-        <nav className="flex flex-row gap-4 text-xs justify-between">
+        <nav className="flex flex-row gap-4 text-xs justify-between w-full sm:w-2/5">
           <Link href="/privacy" legacyBehavior passHref>
             <a className="text-toradleyellow font-bold">Privacy Policy</a>
           </Link>
