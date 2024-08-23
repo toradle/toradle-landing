@@ -1,6 +1,8 @@
 import { LinkItem } from "@/types/header";
 
 export const APP_NAME = "Toradle";
+export const EFFECTIVE_DATE = "2024/08/23";
+export const CONTACT_EMAIL = "contact@toradle.com";
 
 export const STYLE = {
   backgroundImage: 'url(/home-bg.png)',

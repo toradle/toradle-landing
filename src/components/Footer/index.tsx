@@ -21,15 +21,28 @@ const Footer: React.FC<FooterProps> = ({ className }) => {
           {NAV_LINKS.map((item: LinkItem) => {
             const isActive = currentRoute === item.link;
             return (
-                <Link key={item.id} href={item.link} legacyBehavior passHref>
-                    <a className="text-toradleyellow font-bold">{item.title}</a>
-                </Link>
+              <Link key={item.id} href={item.link} legacyBehavior passHref>
+                <a className="text-toradleyellow font-bold">{item.title}</a>
+              </Link>
             );
           })}
         </nav>
-        <p className="mt-7 font-light tracking-tight text-center md:text-left">
+        <p className="my-7 font-light tracking-tight text-center md:text-left">
           {DISCLAIMER}
         </p>
+        <nav className="flex flex-row gap-4 text-xs justify-between">
+          <Link href="/privacy" legacyBehavior passHref>
+            <a className="text-toradleyellow font-bold">Privacy Policy</a>
+          </Link>
+
+          <Link href="/tnc" legacyBehavior passHref>
+            <a className="text-toradleyellow font-bold">Terms & Conditions</a>
+          </Link>
+
+          <Link href="/user_agreement" legacyBehavior passHref>
+            <a className="text-toradleyellow font-bold">User Agreement</a>
+          </Link>
+        </nav>
       </div>
       <div className="mt-10 md:mt-0">
         <Image src="/toradle_icon.svg" width={200} height={200} alt="Logo" />
