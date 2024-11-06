@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { subscribe } from "@/services";
+import Link from "next/link";
 
 const Signup = () => {
     const [email, setEmail] = useState("");
@@ -24,16 +25,18 @@ const Signup = () => {
               </p>
             </div>
             <div className="mx-auto w-full max-w-sm space-y-2">
-              <form className="flex gap-2">
+              {/* <form className="flex gap-2">
                 <Input
                     type="email"
                     value={email}
                     onChange={(e: any) => setEmail(e.target.value)}
                     placeholder="Enter your email"
                     className="max-w-lg flex-1 text-black"
-                />
-                <Button type="button" className="bg-toradleyellow text-black" onClick={onSignup}>Sign Up</Button>
-              </form>
+                /> */}
+                <Link href={"/contactus"}>
+                  <Button type="button" className="bg-toradleyellow text-black" onClick={onSignup}>Sign Up for the Beta</Button>
+                </Link>
+              {/* </form> */}
             </div>
           </div>
         </section>

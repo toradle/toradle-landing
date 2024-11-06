@@ -18,10 +18,10 @@ const HeaderComp: React.FC = () => {
                         Precision-Driven Market Trade Advisory for Stocks and Crypto
                     </div>
                     <Link
-                        href="#beta"
+                        href="/dashboard"
                     >
                         <Button className="bg-toradleyellow text-black focus:bg-toradleyellow focus:text-black active:scale-105">
-                            Get an Invite
+                            Use the App
                         </Button>
                     </Link>
                 </div>

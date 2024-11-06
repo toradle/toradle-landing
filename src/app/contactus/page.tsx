@@ -1,16 +1,18 @@
 import React from "react";
 import Navigation from "@/components/Nav";
 import Footer from "@/components/Footer";
-import ContactUs from "@/components/Contactus";
+import ContactUsForm from "./ContactForm";
 
 const ContactUsPage: React.FC = () => {
     return (
         <div className="flex flex-col min-h-screen text-white">
             <Navigation />
-            <ContactUs />
+            <ContactUsForm />
             <Footer />
         </div>
     );
 };
 
 export default ContactUsPage;
+
+

@@ -32,7 +32,7 @@ const NavLinks = () => {
                             <Menu className="bg-transparent text-toradleyellow" />
                         </Button>
                     </PopoverTrigger>
-                    <PopoverContent className="w-48 p-2 mx-6 bg-transparent border-none">
+                    <PopoverContent className="w-48 p-2 mx-6 bg-slate-700 border-none">
                         <NavigationMenu className="">
                             <NavigationMenuList className="flex flex-col gap-4">
                                 {NAV_LINKS.map((item: LinkItem) => {
