@@ -22,7 +22,7 @@ const Footer: React.FC<FooterProps> = ({ className }) => {
             const isActive = currentRoute === item.link;
             return (
               <Link key={item.id} href={item.link} legacyBehavior passHref>
-                <a className="text-toradleyellow font-bold">{item.title}</a>
+                <a className="text-toradleyellow font-bold hover:bg-yellow-600 hover:text-black px-3 py-2 rounded-md transition-all duration-300 ease-in-out">{item.title}</a>
               </Link>
             );
           })}
@@ -32,15 +32,15 @@ const Footer: React.FC<FooterProps> = ({ className }) => {
         </p>
         <nav className="flex flex-row gap-4 text-xs justify-between w-full sm:w-2/5">
           <Link href="/privacy" legacyBehavior passHref>
-            <a className="text-toradleyellow font-bold">Privacy Policy</a>
+            <a className="text-toradleyellow font-bold hover:bg-yellow-600 hover:text-black px-2 py-1 rounded-md transition-all duration-300 ease-in-out">Privacy Policy</a>
           </Link>
 
           <Link href="/tnc" legacyBehavior passHref>
-            <a className="text-toradleyellow font-bold">Terms & Conditions</a>
+            <a className="text-toradleyellow font-bold hover:bg-yellow-600 hover:text-black px-2 py-1 rounded-md transition-all duration-300 ease-in-out">Terms & Conditions</a>
           </Link>
 
           <Link href="/user_agreement" legacyBehavior passHref>
-            <a className="text-toradleyellow font-bold">User Agreement</a>
+            <a className="text-toradleyellow font-bold hover:bg-yellow-600 hover:text-black px-2 py-1 rounded-md transition-all duration-300 ease-in-out">User Agreement</a>
           </Link>
         </nav>
       </div>
