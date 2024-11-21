@@ -10,7 +10,7 @@ import { STYLE } from "@/constants";
 const HomeComponent: React.FC = () => (
   <div className="flex flex-col justify-center">
 
-      <div className="flex relative flex-col w-full">
+      <div className="flex flex-col w-full space-y-0">
         <Navigation />
         <Header />
         <WhyChooseToradle />

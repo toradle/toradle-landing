@@ -40,7 +40,7 @@ const NavLinks = () => {
                                     return (
                                         <NavigationMenuItem key={item.id}>
                                             <Link href={item.link} legacyBehavior passHref>
-                                                <NavigationMenuLink className="text-toradleyellow font-bold">
+                                                <NavigationMenuLink className={`text-toradleyellow font-bold transition duration-300 ease-in-out transform ${isActive ? 'scale-105' : 'hover:scale-105 hover:text-white'}`}>
                                                     {item.title}
                                                 </NavigationMenuLink>
                                             </Link>
@@ -56,13 +56,14 @@ const NavLinks = () => {
                 <NavigationMenuList className="flex flex-row gap-10">
                     {NAV_LINKS.map((item: LinkItem) => {
                         const isActive = currentRoute === item.link;
-                        return (<NavigationMenuItem key={item.id}>
-                            <Link href={item.link} legacyBehavior passHref>
-                                <NavigationMenuLink className="text-toradleyellow bg-transparent">
-                                    {item.title}
-                                </NavigationMenuLink>
-                            </Link>
-                        </NavigationMenuItem>
+                        return (
+                            <NavigationMenuItem key={item.id}>
+                                <Link href={item.link} legacyBehavior passHref>
+                                    <NavigationMenuLink className={`text-toradleyellow bg-transparent transition duration-300 ease-in-out transform ${isActive ? 'scale-105' : 'hover:scale-105 hover:text-white hover:bg-toradleyellow hover:text-black px-4 py-2 rounded-md'}`}>
+                                        {item.title}
+                                    </NavigationMenuLink>
+                                </Link>
+                            </NavigationMenuItem>
                         );
                     })}
                 </NavigationMenuList>
@@ -73,17 +74,22 @@ const NavLinks = () => {
 
 const NavigationComp = () => {
     return (
-        <header className="flex flex-col grow p-5 sm:px-40 w-full">
-            <div className="flex flex-row gap-5 justify-between items-center text-base font-bold text-center text-amber-300">
-                <Link href="/"
-                    className="uppercase text-toradleyellow font-inter text-3xl text-center">
-                        {APP_NAME}
+        <header className="flex flex-col grow p-6 sm:px-40 w-full bg-black bg-opacity-40 backdrop-blur-lg border-b border-gray-700">
+
+            <div className="flex flex-row gap-8 justify-between items-center text-base font-bold text-center">
+                {/* Logo */}
+                <Link
+                    href="/"
+                    className="uppercase text-toradleyellow font-inter text-4xl"
+                >
+                    {APP_NAME}
                 </Link>
+
+                {/* Navigation Links */}
                 {NavLinks()}
             </div>
         </header>
     );
-
 };
 
 export default NavigationComp;
