@@ -3,6 +3,7 @@ import Link from "next/link";
 import * as React from "react";
 import { Button } from "@/components/ui/button";
 import { usePathname } from 'next/navigation';
+import Image from "next/image";
 
 import {
     NavigationMenu,
@@ -73,17 +74,24 @@ const NavLinks = () => {
 };
 
 const NavigationComp = () => {
+    const currentRoute = usePathname();
     return (
         <header className="flex flex-col grow p-6 sm:px-40 w-full bg-black bg-opacity-40 backdrop-blur-lg border-b border-gray-700">
 
             <div className="flex flex-row gap-8 justify-between items-center text-base font-bold text-center">
                 {/* Logo */}
-                <Link
-                    href="/"
-                    className="uppercase text-toradleyellow font-inter text-4xl"
-                >
-                    {APP_NAME}
-                </Link>
+                <div className="flex flex-row items-center gap-2">
+
+                    {currentRoute !== "/" && (
+                        <Image src="/toradle_icon.svg" alt="toradle logo" width={50} height={50} />
+                    )}
+                    <Link
+                        href="/"
+                        className="uppercase text-toradleyellow font-inter text-4xl"
+                    >
+                        {APP_NAME}
+                    </Link>
+                </div>
 
                 {/* Navigation Links */}
                 {NavLinks()}
