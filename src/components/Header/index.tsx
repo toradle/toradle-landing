@@ -3,6 +3,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+
+const BETA_LINK = process.env.NEXT_PUBLIC_BETA_LINK || "";
+
 const HeaderComp: React.FC = () => {
     return (
         <header className="flex justify-center items-center p-5 text-white">
@@ -18,7 +21,7 @@ const HeaderComp: React.FC = () => {
                         Precision-Driven Market Trade Advisory for Stocks and Crypto
                     </div>
                     <Link
-                        href="/dashboard"
+                        href={BETA_LINK}
                     >
                         <Button className="bg-gradient-to-r from-yellow-400 to-yellow-600 text-black focus:bg-gradient-to-r focus:from-yellow-400 focus:to-yellow-600 active:scale-105 transform transition-transform duration-300 hover:scale-110 hover:shadow-lg rounded-md px-12 py-6 text-lg font-semibold hover:bg-gradient-to-r hover:from-yellow-500 hover:to-yellow-700 hover:border-2 hover:border-yellow-500 hover:border-opacity-50">
                             Join the Beta Waitlist

@@ -5,6 +5,8 @@ import { Inter as FontSans } from "next/font/google";
 import { cn } from "@/lib/utils"
 import { STYLE } from "@/constants";
 
+import { Toaster } from "@/components/ui/toaster"
+
 const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",
@@ -31,6 +33,7 @@ export default function RootLayout({
         <main className="bg-black" style={STYLE}>
           {children}
         </main>
+        <Toaster />
       </body>
     </html>
   );
