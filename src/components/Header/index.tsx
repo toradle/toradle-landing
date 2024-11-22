@@ -11,7 +11,7 @@ const HeaderComp: React.FC = () => {
         <header className="flex justify-center items-center min-h-screen text-white">
             <div className="flex flex-col md:flex-row items-center justify-between w-full max-w-7xl px-4">
                 <div className="md:hidden w-full flex justify-center mb-8">
-                    <Image src={"/toradle_icon.svg"} alt="toradle logo" width={320} height={320} className="w-[280px] sm:w-[320px]" />
+                    <Image src={"/toradle_icon.svg"} alt="toradle logo" width={300} height={300} className="w-[280px] sm:w-[320px]" />
                 </div>
                 <div className="text-center md:text-left space-y-6 flex-1 mb-8 md:mb-0">
                     <h1 className="text-5xl sm:text-6xl md:text-8xl font-extrabold tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-yellow-600">
