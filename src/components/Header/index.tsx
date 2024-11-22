@@ -15,7 +15,7 @@ const HeaderComp: React.FC = () => {
                     <div className="text-center sm:text-left text-7xl text-white">
                         Toradle.
                         <br />
-                        Investing made simple.
+                        Trading made simple.
                     </div>
                     <div className="text-center sm:text-left text-white text-xl">
                         Precision-driven market trade advisory for crypto
