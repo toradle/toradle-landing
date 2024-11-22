@@ -35,7 +35,7 @@ const ContactUsForm = () => {
     const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
     const { toast } = useToast()
 
-    let [loading, setLoading] = useState(true);
+    let [loading, setLoading] = useState(false);
 
     const handleRecaptchaChange = (token: string | null) => {
         setRecaptchaToken(token);
