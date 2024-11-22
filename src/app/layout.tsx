@@ -14,7 +14,7 @@ const fontSans = FontSans({
 
 export const metadata: Metadata = {
   title: "Toradle",
-  description: "Investing made simple",
+  description: "Trading made simple",
 };
 
 export default function RootLayout({
