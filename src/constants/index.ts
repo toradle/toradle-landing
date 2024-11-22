@@ -42,7 +42,7 @@ export const NAV_LINKS: LinkItem[] = [
 export const ABOUT_US = [
   {
     title: "Our Unique Approach",
-    content: "Toradle stands apart from other trading platforms with our proprietary machine learning algorithm. Unlike traditional methods that rely on news reports, gossip, or graphical analysis, Toradle uses precision mathematics to calculate the statistical probability of price events. This ensures a high likelihood of success, focusing purely on quantitative data from open-source and third-party APIs."
+    content: "Toradle stands apart from other trading platforms with our proprietary mathematical algorithm. Unlike traditional methods that rely on news reports, gossip, or graphical analysis, Toradle uses precision mathematics to calculate the statistical probability of price events. This ensures a high likelihood of success, focusing purely on quantitative data from open-source and third-party APIs."
   },
   {
     title: "How It Works",
@@ -103,9 +103,9 @@ export const HOW_WE_WORK_SECTIONS = [
         ]
     },
     {
-        title: "Expert-Driven Trade Recommendations",
+        title: "Analysis-Driven Trade Recommendations",
         points: [
-            "Toradle offers expert-driven trade recommendations, eliminating the need for users to create their own trading algorithms.",
+            "Toradle offers analysis-driven trade recommendations, eliminating the need for users to create their own trading algorithms.",
             "Our platform provides clear, concise advice based on our internal expertise, giving you a high probability of success with each trade."
         ]
     },

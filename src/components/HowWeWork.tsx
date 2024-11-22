@@ -13,11 +13,11 @@ import { HOW_WE_WORK_SECTIONS } from "@/constants";
 
 const TITLE = "How We Work";
 const SUB_TITLE = `
-    At Toradle, we redefine market trade advisory with our cutting-edge machine learning algorithm.
+    At Toradle, we redefine market trade advisory with our cutting-edge mathematical algorithm.
 `;
 
 const DESC = `
-    Designed to deliver precise and reliable trading recommendations, our proprietary algorithm
+    Designed to deliver precise and reliable trading recommendations, our proprietary mathematical algorithm
     calculates the statistical probability of price events with unmatched accuracy,
     ensuring a high likelihood of successful trades.
 `;

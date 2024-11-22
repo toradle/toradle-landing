@@ -18,10 +18,12 @@ const HeaderComp: React.FC = () => {
                         Investing made simple.
                     </div>
                     <div className="text-center sm:text-left text-white text-xl">
-                        Precision-Driven Market Trade Advisory for Stocks and Crypto
+                        Precision-driven market trade Advisory for Crypto
                     </div>
                     <Link
                         href={BETA_LINK}
+                        target="_blank"
+                        rel="noopener noreferrer"
                     >
                         <Button className="bg-gradient-to-r from-yellow-400 to-yellow-600 text-black focus:bg-gradient-to-r focus:from-yellow-400 focus:to-yellow-600 active:scale-105 transform transition-transform duration-300 hover:scale-110 hover:shadow-lg rounded-md px-12 py-6 text-lg font-semibold hover:bg-gradient-to-r hover:from-yellow-500 hover:to-yellow-700 hover:border-2 hover:border-yellow-500 hover:border-opacity-50">
                             Join the Beta Waitlist

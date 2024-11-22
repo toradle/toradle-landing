@@ -59,7 +59,7 @@ const NavLinks = () => {
                         return (
                             <NavigationMenuItem key={item.id}>
                                 <Link href={item.link} legacyBehavior passHref>
-                                    <NavigationMenuLink className={`text-toradleyellow bg-transparent transition duration-300 ease-in-out transform ${isActive ? 'scale-105' : 'hover:scale-105 hover:text-white hover:bg-toradleyellow hover:text-black px-4 py-2 rounded-md'}`}>
+                                    <NavigationMenuLink className={`text-toradleyellow bg-transparent transition duration-300 ease-in-out transform ${isActive ? 'scale-105' : 'hover:scale-105 hover:text-white'}`}>
                                         {item.title}
                                     </NavigationMenuLink>
                                 </Link>

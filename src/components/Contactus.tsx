@@ -11,6 +11,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import Link from "next/link";
 
 interface FeatureCardProps {
   icon: React.ComponentType<any>;
@@ -18,6 +19,7 @@ interface FeatureCardProps {
   description: string;
 }
 
+const BETA_LINK = process.env.NEXT_PUBLIC_BETA_LINK || "";
 const FeatureCard: React.FC<FeatureCardProps> = ({ icon: Icon, title, description }) => (
   <motion.div
     whileHover={{ y: -5 }}
@@ -91,6 +93,11 @@ const ContactUs: React.FC = () => {
           transition={{ duration: 0.6, delay: 0.6 }}
           className="mt-16 flex justify-center"
         >
+        <a
+            href={BETA_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
+        >
           <Button
             size="lg"
             className="bg-yellow-500 text-black font-semibold py-4 px-8 shadow-lg group hover:bg-yellow-600 transition-all duration-300"
@@ -98,6 +105,7 @@ const ContactUs: React.FC = () => {
             Join the Beta Program
             <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
           </Button>
+        </a>
         </motion.div>
       </div>
     </section>
