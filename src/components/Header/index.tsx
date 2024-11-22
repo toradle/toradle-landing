@@ -9,7 +9,7 @@ const BETA_LINK = process.env.NEXT_PUBLIC_BETA_LINK || "";
 const HeaderComp: React.FC = () => {
     return (
         <header className="flex justify-center items-center p-5 text-white">
-            <div className="flex flex-col sm:flex-row-reverse items-center sm:justify-between justify-center gap-8 sm:my-32 px-8 sm:px-48 py-14 sm:py-16">
+            <div className="flex flex-col sm:flex-row-reverse items-center sm:justify-between justify-center gap-8 sm:my-32 px-8 sm:px-48 py-10 sm:py-16">
                 <Image src={"/toradle_icon.svg"} alt="toradle logo" width={150} height={150} className="sm:w-[400px]" />
                 <div className="flex flex-col gap-6 items-center sm:items-start">
                     <div className="flex flex-col gap-2 text-center sm:text-left text-white">
