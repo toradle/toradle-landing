@@ -68,7 +68,7 @@ const ContactUs: React.FC = () => {
         </div>
 
         {/* Cards Section */}
-        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3 ">
           <FeatureCard
             icon={Zap}
             title="Early Access"

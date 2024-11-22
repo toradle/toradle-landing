@@ -18,7 +18,7 @@ const HeaderComp: React.FC = () => {
                         Investing made simple.
                     </div>
                     <div className="text-center sm:text-left text-white text-xl">
-                        Precision-driven market trade Advisory for Crypto
+                        Precision-driven market trade advisory for crypto
                     </div>
                     <Link
                         href={BETA_LINK}

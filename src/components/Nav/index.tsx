@@ -41,7 +41,7 @@ const NavLinks = () => {
                                     return (
                                         <NavigationMenuItem key={item.id}>
                                             <Link href={item.link} legacyBehavior passHref>
-                                                <NavigationMenuLink className={`text-toradleyellow font-bold transition duration-300 ease-in-out transform ${isActive ? 'scale-105' : 'hover:scale-105 hover:text-white'}`}>
+                                                <NavigationMenuLink className={`text-white font-bold transition duration-300 ease-in-out transform hover:bg-yellow-500 hover:text-black px-3 py-2 rounded ${isActive ? 'scale-105' : 'hover:scale-105'}`}>
                                                     {item.title}
                                                 </NavigationMenuLink>
                                             </Link>
@@ -60,7 +60,7 @@ const NavLinks = () => {
                         return (
                             <NavigationMenuItem key={item.id}>
                                 <Link href={item.link} legacyBehavior passHref>
-                                    <NavigationMenuLink className={`text-toradleyellow bg-transparent transition duration-300 ease-in-out transform ${isActive ? 'scale-105' : 'hover:scale-105 hover:text-white'}`}>
+                                    <NavigationMenuLink className={`text-white bg-transparent transition duration-300 ease-in-out transform hover:bg-yellow-500 hover:text-black px-3 py-2 rounded ${isActive ? 'scale-105' : 'hover:scale-105'}`}>
                                         {item.title}
                                     </NavigationMenuLink>
                                 </Link>

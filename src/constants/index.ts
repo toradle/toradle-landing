@@ -84,7 +84,7 @@ export const HOW_WE_WORK_SECTIONS = [
     {
         title: "Algorithmic Strategy Development",
         points: [
-            "The core of Toradle is its sophisticated machine learning algorithm, which is built on precision mathematics and proprietary logic.",
+            "The core of Toradle is its sophisticated mathematical algorithm, which is built on precision mathematics and proprietary logic.",
             "Our algorithm calculates the statistical probability of price events, indicating whether there is a high likelihood of a sell or a buy opportunity."
         ]
     },

@@ -3,7 +3,7 @@ import { WHY_TORADLE_POINTS } from "@/constants";
 
 const WhyChooseToradle: React.FC = () => {
   return (
-    <section className="min-h-screen flex flex-col justify-center items-center py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-grey-900 to-black" id="why-choose-toradle">
+    <section className="min-h-screen flex flex-col justify-center items-center py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-900 to-black" id="why-choose-toradle">
       <div className="max-w-7xl w-full mx-auto">
         {/* Section Title */}
         <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 to-yellow-600">
